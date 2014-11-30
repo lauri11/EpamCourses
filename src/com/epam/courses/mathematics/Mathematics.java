@@ -12,6 +12,8 @@ public class Mathematics {
             return -1;
         }
 
+        if(n==1) return 1;
+
         int fN = 0;
         int fN1 = 1;
         int fN2 = 0;

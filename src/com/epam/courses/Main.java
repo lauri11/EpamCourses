@@ -1,8 +1,11 @@
 package com.epam.courses;
 
+import com.epam.courses.arrays.ArraysHelper;
 import com.epam.courses.mathematics.Mathematics;
 import com.epam.courses.triangle.Point;
 import com.epam.courses.triangle.Triangle;
+
+import java.util.Arrays;
 
 /**
  * Created by Lena on 11/22/2014.
@@ -40,5 +43,43 @@ public class Main {
 
         Triangle triangle2 = new Triangle(new Point(1, 8), new Point(-2, -7), new Point(-4, -17));
         System.out.println(triangle2.square());
+
+        //Task 4. N1
+        ArraysHelper arraysHelper = new ArraysHelper();
+        int [] tempArray = arraysHelper.fibonacciShuffle(20);
+        System.out.println(Arrays.toString(tempArray));
+
+        //Task 4. N2
+        int [] tempArray1 = new int [] {1, -3, 5, 10, -5};
+        System.out.println(arraysHelper.arrayMin(tempArray1));
+        System.out.println(arraysHelper.arrayMax(tempArray1));
+
+        //Task 4. N3
+        int [] result = arraysHelper.arrayReversed(tempArray1);
+        System.out.println(Arrays.toString(result));
+
+        //Task 4. N4
+        arraysHelper.arraySort(tempArray1);
+        System.out.println(Arrays.toString(tempArray1));
+
+        //Task 4. N5
+        int res = arraysHelper.arraySearch(tempArray1);
+        System.out.println(res);
+
+        //Task 4. N6
+        int [][] twoDimArray = arraysHelper.twoDimArray(2, 3);
+        //arraysHelper.printTwiDimArray(twoDimArray);
+
+        //Task 4. N7
+        arraysHelper.twoDimArrayFill(twoDimArray, 10);
+        arraysHelper.printTwiDimArray(twoDimArray);
+
+        //Task 4. N8
+        int [][] twoDimArray2;
+        twoDimArray2 = twoDimArray.clone();
+
+        //Task 4. N9
+        System.out.println(Arrays.equals(twoDimArray, twoDimArray2));
+        System.out.println(Arrays.deepEquals(twoDimArray, twoDimArray2));
     }
 }
