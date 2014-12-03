@@ -1,6 +1,9 @@
 package com.epam.courses;
 
 import com.epam.courses.arrays.ArraysHelper;
+import com.epam.courses.devices.Device;
+import com.epam.courses.devices.Laptop;
+import com.epam.courses.devices.Mobile;
 import com.epam.courses.mathematics.Mathematics;
 import com.epam.courses.triangle.Point;
 import com.epam.courses.triangle.Triangle;
@@ -81,5 +84,12 @@ public class Main {
         //Task 4. N9
         System.out.println(Arrays.equals(twoDimArray, twoDimArray2));
         System.out.println(Arrays.deepEquals(twoDimArray, twoDimArray2));
+
+        //Task5. N4
+        Device d = new Laptop();
+        //
+        // d.powerOff();
+        System.out.println(d.getMaker());
+        System.out.println(d.getMaker("Any"));
     }
 }
